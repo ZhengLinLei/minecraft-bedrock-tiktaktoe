@@ -1,0 +1,1 @@
+One click to the file and then open it with Minecraft Bedrock

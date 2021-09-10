@@ -1,0 +1,8 @@
+You must need a friend and one of them choose who is Player1 and Player2,
+the Player1 generate chickens that will be replaced to armor stand and Pla-
+yer2 generate cows and the same.
+
+For generate it you need the chicken or cow spawn egg and the one of them
+start the game generating the mob inside the 3x3 tiktaktoe square one by o-
+ne and the first make a trial won the point. Every player need to win 5 poi-
+nts to win the game.

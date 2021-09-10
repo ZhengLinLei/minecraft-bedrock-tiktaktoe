@@ -1,0 +1,13 @@
+---------------------------
+Part I
+
+DETECT & PUSH ARMOR_STAND / KILL MOB
+
+/execute @e[type=chicken,x=NUM_X,y=NUM_Y,z=NUM_Z,dx=2,dz=2] ~~~ summon armor_stand ~~~ Player1 (Repeat, always active)
+    |
+    ----> /kill @e[type=chicken] (Chain, conditional, always active)
+
+/execute @e[type=cow,x=NUM_X,y=NUM_Y,z=NUM_Z,dx=2,dz=2] ~~~ summon armor_stand ~~~ Player2 (Repeat, always active)
+    |
+    ----> /kill @e[type=cow] (Chain, conditional, always active)
+
