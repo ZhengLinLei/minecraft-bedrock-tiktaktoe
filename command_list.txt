@@ -11,3 +11,33 @@ DETECT & PUSH ARMOR_STAND / KILL MOB
     |
     ----> /kill @e[type=cow] (Chain, conditional, always active)
 
+
+GENERATE VILLAGER / SHOW IN VIEWER
+
+/execute @e[type=armor_stand,name=Player1] ~~~ detect ~~-1~ concrete 1 summon villager Player(1,2)-NUM NUM_X NUM_Y NUM_Z (Repeat, always active)
+    |
+    ----> /clone NUM_X NUM_Y NUM_Z END_X END_Y END_Z POS_X POS_Y POS_Z (Chain, conditional, always active) or (Impulse, with comparator)
+    |
+    ----> /kill @e[type=villager,name=Player1-NUM] (Impulse, with comparator)
+            |
+            ----> /kill @e[type=villager,name=Player2-NUM] (Chain, always active)
+                    |
+                    ----> /fill NUM_X NUM_Y NUM_Z END_X END_Y END_Z concrete 15 (Chain, always active)
+
+/testfor @e[type=armor_stand] (Repeat, always active)
+    |
+    ----> /kill @e[type=villager] (Impulse, with comparator)
+            |
+            ----> /clone NUM_X NUM_Y NUM_Z END_X END_Y END_Z POS_X POS_Y POS_Z (Chain, always active)
+
+
+-------------------------------
+Part II
+
+CHECK WINS
+
+/testfor @e[type=villager,name=Player(1,2)-NUM] (Repeat, always active)
+    |
+    ----> /testfor @e[type=villager,name=Player(1,2)-NUM] (Chain, conditional, always active)
+            |
+            ----> /testfor @e[type=villager,name=Player(1,2)-NUM] (Chain, conditional, always active)
